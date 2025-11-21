@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Blog - Mundo Tech</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/font/flaticon.css">
+</head>
+
+<body>
+    <header>
+        <section class="header-icons-container">
+            <div class="icons">
+                <a href="/"><span class="flaticon-001-facebook"></span></a>
+                <a href="/"><span class="flaticon-002-twitter"></span></a>
+                <a href="/"><span class="flaticon-011-instagram"></span></a>
+                <a href="/"><span class="flaticon-010-linkedin"></span></a>
+                <a href="/"><span class="flaticon-008-youtube"></span></a>
+            </div>
+        </section>
+
+```
+    <nav>
+        <section class="nav-logo-container">
+            <a href="/"><img src="/assets/img/Logo-negro.png" alt="Logo de mi blog principal"></a>
+        </section>
+
+        <section class="profile-link">
+            <a href="/blogs.html">Volver</a>
+        </section>
+    </nav>
+</header>
+
+<main class="blogpost-main">
+    <section class="grid-container blogpost-container">
+        <h3>Blogpost</h3>
+
+        <!-- CONTENIDO DINÁMICO -->
+        <article>
+            <h1 id="post-title"></h1>
+            <p id="post-date"></p>
+            <img id="post-image" src="" alt="">
+            <div id="post-content"></div>
+        </article>
+
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Mundo Tech - Creado por Ignacio Bigatti</p>
+</footer>
+
+<!-- SCRIPT PARA CARGAR EL POST SEGÚN LA URL -->
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const posts = {
+        ia: {
+            titulo: "La inteligencia artificial en el diseño UX",
+            fecha: "Publicado el 10 de noviembre de 2025",
+            imagen: "/assets/img/Cover.png",
+            contenido: `
+                <p>
+                    La inteligencia artificial (IA) está transformando profundamente la manera en que se diseña,
+                    evalúa y optimiza la experiencia de usuario. Lo que antes dependía solo de la intuición del
+                    diseñador ahora se complementa con modelos predictivos, análisis avanzados y herramientas que
+                    automatizan tareas clave.
+                </p>
+                <p>
+                    Herramientas avanzadas permiten personalizar interfaces y analizar comportamiento.
+                </p>
+            `
+        },
+        tendencias: {
+            titulo: "5 tendencias Tech para 2025",
+            fecha: "Publicado el 2 de octubre de 2025",
+            imagen: "/assets/img/013-newsletter.png",
+            contenido: `
+                <p>
+                    El 2025 será un año clave para la evolución tecnológica. Las tendencias que están
+                    emergiendo hoy ya están transformando la forma en que trabajamos, aprendemos,
+                    consumimos información y nos conectamos con el mundo digital.
+                </p>
+                <p>
+                    La IA también tendrá un papel clave en accesibilidad y automatización.
+                </p>
+            `
+        },
+        "blog-html-css": {
+            titulo: "Cómo crear tu propio blog con HTML y CSS",
+            fecha: "Publicado el 18 de noviembre de 2025",
+            imagen: "/assets/img/Cover.png",
+            contenido: `
+                <p>
+                    Crear tu propio blog con HTML y CSS no solo es una excelente forma de aprender,
+                    sino también una oportunidad para crear un espacio digital que podés seguir
+                    ampliando con nuevas tecnologías. A medida que avances, podrás agregar
+                    funcionalidades como paginación, búsqueda, o incluso convertirlo en un proyecto
+                    completamente dinámico.
+                </p>
+                <p>
+                    Este blog es un ejemplo completo hecho solo con HTML, CSS y un poco de JavaScript.
+                </p>
+            `
+        }
+    };
+
+    const post = posts[id];
+
+    if (post) {
+        document.getElementById("post-title").innerText = post.titulo;
+        document.getElementById("post-date").innerText = post.fecha;
+        document.getElementById("post-image").src = post.imagen;
+        document.getElementById("post-content").innerHTML = post.contenido;
+    } else {
+        document.getElementById("post-title").innerText = "Artículo no encontrado 😢";
+    }
+</script>
+```
+
+</body>
+
+</html>

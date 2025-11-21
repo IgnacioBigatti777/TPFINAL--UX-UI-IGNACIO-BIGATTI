@@ -1,0 +1,193 @@
+/* --- GENERAL --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    color: #111;
+}
+
+/* --- HEADER --- */
+header {
+    background: linear-gradient(90deg, #38bdf8, #818cf8, #a855f7);
+    color: white;
+}
+
+.header-icons-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 40px;
+}
+
+.header-icons-container .icons a {
+    color: white;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo-container img {
+    width: 160px;
+}
+
+.profile-link a {
+    color: #4f46e5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.profile-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- HOME --- */
+.home-main {
+/* --- HOME --- */
+        position: relative;
+        background-image: url("/assets/img/astral.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    /* Capa translúcida sobre la imagen (efecto tech suave) */
+    .home-main::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background: rgba(248, 250, 252, 0.4);
+               /* más nítido */
+               backdrop-filter: blur(1px);
+    }
+        
+
+    /* Asegura que el texto quede visible sobre el overlay */
+    .home-main-text,
+    .home-main-button {
+        position: relative;
+        z-index: 1;
+    }
+
+
+.home-main-text {
+    font-size: 2.5rem;
+    color: #0f172a;
+    text-shadow: 0px 1px 4px rgba(255, 255, 255, 0.9);
+}
+
+.home-main-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.home-main-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #06b6d4, #6366f1);
+}
+
+/* --- BLOGS --- */
+.blogs-main {
+    padding: 40px 20px;
+}
+
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blogs-news-img-container img,
+.post-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blogs-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #6366f1, #3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.blogs-button:hover {
+    background: linear-gradient(90deg, #06b6d4, #60a5fa);
+}
+
+/* --- BLOG DETAIL --- */
+.blogpost-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.blogpost-container h1 {
+    color: #3b82f6;
+}
+
+.blogpost-container img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* --- PERFIL --- */
+.perfil-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.perfil-img-container img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.perfil-info-container {
+    max-width: 600px;
+}
+
+.perfil-info-container h1 {
+    color: #3b82f6;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #e0f2fe;
+    text-align: center;
+    padding: 15px;
+    color: #334155;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
